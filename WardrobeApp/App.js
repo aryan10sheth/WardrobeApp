@@ -1,22 +1,21 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from './screens/HomeScreen';
-import UploadScreen from './screens/UploadScreen';
-import WardrobeScreen from './screens/WardrobeScreen';
-import StyleScreen from './screens/StyleScreen';
-
-const Tab = createBottomTabNavigator();
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Upload" component={UploadScreen} />
-        <Tab.Screen name="Wardrobe" component={WardrobeScreen} />
-        <Tab.Screen name="Style" component={StyleScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <View style={styles.container}>
+      <Text>Welcome to the Wardrobe App!</Text>
+      <StatusBar style="auto" />
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+});
