@@ -1,0 +1,1 @@
+// WardrobeScreen.js content goes here
